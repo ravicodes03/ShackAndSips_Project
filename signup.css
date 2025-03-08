@@ -1,0 +1,236 @@
+/* From Uiverse.io by ammarsaa */ 
+body{
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color: var(--primary-accent);
+}
+:root {
+    --main-bg:#fff8e7;
+    --primary-accent:#6b4226;
+    --secondary-accent:#ff6f91;
+    --highlight:#b2f9b8;
+    --main-color: #443;
+    --border-radius: 95% 4% 97% 5% / 4% 94% 3% 95%;
+    --border-radius-hover: 4% 95% 6% 95% / 95% 4% 92% 5%;
+    --border: .2rem solid var(--main-bg);
+    --border-hover: .2rem dashed var(--main-color);
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 75%;
+    height: 70vh;
+    padding: 5%;
+    border-radius: var(--border-radius);
+    position: relative;
+    background-color:var(--main-bg);
+    color: #fff;
+    border:var(--border);
+  }
+  .form:hover{
+    border: var(--border-hover);
+    border-radius: var(--border-radius-hover);
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: var(--primary-accent);
+  }
+  
+  .title::before {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .title::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .title::before,
+  .title::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: var(--primary-accent);
+  }
+  
+  .message, 
+  .signin {
+    font-size: 14.5px;
+    color: var(--main-color);
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline var(--primary-accent);
+  }
+  
+  .signin a {
+    color: var(--primary-accent);
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form label {
+    position: relative;
+  }
+  
+  .form label .input {
+    background-color:var(--main-color);
+    color: #fff;
+    width: 100%;
+    padding: 20px 05px 05px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+  }
+  
+  .form label .input + span {
+    color: var(--main-bg);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form label .input:placeholder-shown + span {
+    top: 12.5px;
+    font-size: 0.9em;
+  }
+  
+  .form label .input:focus + span,
+  .form label .input:valid + span {
+    color:var(--main-color);
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  
+  .input {
+    font-size: medium;
+  }
+  
+  button,.submit{
+    border: var(--border);
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--main-bg);
+    font-size: 16px;
+    transform: .3s ease;
+    background-color:var(--primary-accent);
+    /* opacity: 0.7; */
+    text-decoration: none;
+  }
+  
+  button:hover, .submit:hover {
+    background-color:var(--main-bg);
+    color: var(--primary-accent);
+    border-radius: var(--border-radius-hover);
+    border: var(--border-hover);
+    opacity: 1;
+  }
+  /* button{
+    background-color:var(--primary-accent);
+    color: #fff;
+    border: none;
+  }
+  .submit:hover, button:hover{
+    background-color:var(--main-bg);
+    color: var(--primary-accent);
+  } */
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  /* social account login  */
+
+  
+.social-account-container {
+    margin-top: 0px;
+  }
+  
+  .social-account-container .title1 {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: var(--primary-accent);
+  }
+  
+  .social-account-container .social-accounts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-account-container .social-accounts .social-button {
+    background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+    border: 5px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 12px 10px -8px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .social-account-container .social-accounts .social-button .svg {
+    fill: white;
+    margin: auto;
+  }
+  
+  .social-account-container .social-accounts .social-button:hover {
+    transform: scale(1.2);
+  }
+  
+  .social-account-container .social-accounts .social-button:active {
+    transform: scale(0.9);
+  }
+  
+  .agreement {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .agreement a {
+    text-decoration: none;
+    color: var(--primary-accent);
+    font-size: 10px;
+  }
